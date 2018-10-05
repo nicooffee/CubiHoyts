@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteClientes" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a6b3b8d7-fe9d-45e5-b994-63608f0a610a">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Clientes.xml"/>
+	<parameter name="NombreCliente" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="tipoCliente" class="java.lang.String"/>
+	<parameter name="direccion" class="java.lang.String"/>
+	<parameter name="rut" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="rut" class="java.lang.String">
+		<fieldDescription><![CDATA[rut]]></fieldDescription>
+	</field>
+	<field name="tipoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[tipoCliente]]></fieldDescription>
+	</field>
+	<field name="nombreCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[nombreCliente]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[direccion]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<background>
+		<band height="799">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="799" uuid="d1a7ab09-8e53-4013-a779-23f6e4179d3e"/>
+				<image>
+					<reportElement x="53" y="289" width="448" height="220" uuid="630f2f08-1be6-4c01-94a4-07ac3f0fc534"/>
+					<imageExpression><![CDATA["src/imagenes/cubiHoyts.png"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</background>
+	<title>
+		<band height="92" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="92" uuid="5be44625-46b1-484a-8118-8cc422387858"/>
+				<staticText>
+					<reportElement x="0" y="0" width="220" height="40" uuid="bd1339fa-cc42-4a82-a44b-5936a344f4ac"/>
+					<textElement>
+						<font fontName="Times New Roman" size="24" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Reporte de Clientes]]></text>
+				</staticText>
+				<image>
+					<reportElement x="390" y="0" width="165" height="80" uuid="ea33a092-e544-498f-b256-64b75d14e438"/>
+					<imageExpression><![CDATA["src/imagenes/22497577_996422660500437_674961760_n.png"]]></imageExpression>
+				</image>
+				<textField pattern="MMMMM dd, yyyy">
+					<reportElement x="0" y="60" width="100" height="24" uuid="9261e4c3-a84d-4d52-ac3f-67398fe00ac5"/>
+					<textElement>
+						<font fontName="Times New Roman" size="11" isItalic="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="40" width="80" height="20" uuid="45407c42-f94b-4348-9ca1-3f9af40d259e"/>
+					<textElement>
+						<font fontName="Times New Roman" isBold="true" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[CubiHoyts]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="70" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="70" uuid="9feb4dd0-4836-41e4-aad1-211fc6394f66"/>
+				<staticText>
+					<reportElement key="" x="0" y="0" width="180" height="30" uuid="a7fd002d-0956-4240-ac86-c0b6afe28774"/>
+					<textElement>
+						<font fontName="Times New Roman" size="16"/>
+					</textElement>
+					<text><![CDATA[Nombre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="180" y="0" width="100" height="30" uuid="3dccf214-1f91-4deb-b5c1-45b0bf4406f9"/>
+					<textElement>
+						<font fontName="Times New Roman" size="16"/>
+					</textElement>
+					<text><![CDATA[RUT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="310" y="0" width="140" height="30" uuid="d15db297-d374-4776-8d1b-20d6e540e484"/>
+					<textElement>
+						<font fontName="Times New Roman" size="16"/>
+					</textElement>
+					<text><![CDATA[Direccion]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="450" y="0" width="100" height="30" uuid="884d37ec-245f-4d00-a0c7-7dc5da5c28aa"/>
+					<textElement>
+						<font fontName="Times New Roman" size="16"/>
+					</textElement>
+					<text><![CDATA[Tipo]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<frame>
+				<reportElement x="0" y="0" width="555" height="24" uuid="73c64dc9-7b17-4c0a-b08f-896fed02d64a"/>
+				<textField>
+					<reportElement key="" x="0" y="0" width="180" height="20" uuid="b7fc5a98-f037-477c-9977-24a1e2ca960e"/>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nombreCliente}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="180" y="0" width="100" height="20" uuid="88ef4fde-0385-4f3f-bc4a-3e25988845d9"/>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{rut}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="310" y="0" width="145" height="20" uuid="2a8e53f0-1890-4fef-9447-4fb11aeda8d8"/>
+					<textElement>
+						<font fontName="Times New Roman" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="455" y="0" width="100" height="20" uuid="ffe34518-83af-4ec3-8d51-b2af9203e3ce"/>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tipoCliente}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="-4" width="555" height="1" uuid="52073d93-e9d2-4ad2-884d-d1ac6aded09f"/>
+				</line>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="22" uuid="0fd4eb2a-7b81-4521-95f7-604b1b9ae184"/>
+				<textField>
+					<reportElement x="455" y="0" width="100" height="20" uuid="33c8bcf5-20eb-4810-846e-bd4a7a96c520"/>
+					<textElement textAlignment="Right">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="0" width="80" height="20" uuid="3dc05793-a286-40e9-9cad-0dd9ae519ce4"/>
+					<textElement>
+						<font fontName="Times New Roman" isBold="true" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[CubiHoyts]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageFooter>
+</jasperReport>
